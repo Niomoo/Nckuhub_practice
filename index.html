@@ -3,10 +3,99 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
     <title>foodpanda</title>
   </head>
   <body>
     <div id="app"></div>
-    <!-- built files will be auto injected -->
+    <div class="address_section px-3 pb-5">
+      <div class="address_slogan container pl-0 py-5 pr-5">
+          <h1>把您喜愛的美食親手外送給您</h1>
+      </div>
+      <div class="address_search container px-0">
+        <form action="">
+          <div class="search_input">
+            <input class="search_input w-100 px-3" type="text" placeholder="輸入您欲送達的地址">
+          </div>
+          <div class="search_button d-flex align-items-center my-3">
+            <button class="button d-inline-block w-100 change_tab">外送</button>
+            <span class="mx-2">或</span>
+            <button class="button d-inline-block w-100 change_tab">外帶自取</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="join">
+      <div class="join_info">
+        <p class="join_info_slogan">加入foodpanda，把你的美食分享給大家！</p>
+        <p class="join_info_content">想要上千名新顧客試試你的美食嗎？我們想，相信你也是！</p>
+        <p class="join_info_content">達到這個目的超簡單：我們把你的菜單放上線、幫你處理訂單、到餐廳去取餐、將餐點外送給顧客們！</p>
+        <p class="join_info_content">還等什麼？一起和我們開啟這個外送美食給大家的旅程吧！</p>
+        <button class="join_button d-inline-block w-100 change_tab">立即加入</button>
+      </div>
+    </div>
+
+    <div class="blank"></div>
+
+    <div class="city" id="#foodList">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide mr-3 change_tab" style="width: 216px; overflow: hidden;"  v-on:click="select">
+                <img src="https://asia-public.foodpanda.com/marketing/production/tw/images/nl/city-images/Tapei1.jpg?v=1459522682" style="height: 272px; margin-left: -100px">
+                <span class="city_name">台北市</span>
+            </div>
+            <div class="swiper-slide mr-3 change_tab" style="width: 216px; overflow: hidden;">
+                <img src="https://asia-public.foodpanda.com/marketing/production/tw/images/nl/city-images/New-Taipei1.jpg?v=1459522682" style="height: 272px; margin-left: -100px">
+                <span class="city_name">新北市</span>
+            </div>
+            <div class="swiper-slide mr-3 change_tab" style="width: 216px; overflow: hidden;">
+                <img src="https://asia-public.foodpanda.com/marketing/production/tw/images/nl/city-images/Taichung1.jpg?v=1459522682" style="height: 272px; margin-left: -100px">
+                <span class="city_name">台中市</span>
+            </div>
+            <div class="swiper-slide mr-3 change_tab" style="width: 216px; overflow: hidden;">
+                <img src="https://asia-public.foodpanda.com/marketing/production/tw/images/nl/city-images/Kaohsiung1.jpg?v=1459522682" style="height: 272px; margin-left: -100px">
+                <span class="city_name">高雄市</span>
+            </div>
+            <div class="swiper-slide mr-3 change_tab" style="width: 216px; overflow: hidden;">
+                <img src="https://images.deliveryhero.io/image/fd-tw/city-tile/City-tile-Hsinchu.jpg" style="height: 272px; margin-left: -100px">
+                <span class="city_name">新竹市</span>
+            </div>
+            <div class="swiper-slide mr-3 change_tab" style="width: 216px; overflow: hidden;">
+                <img src="https://images.deliveryhero.io/image/fd-tw/city-tile/City-tile-taoyuan.jpg" style="height: 272px; margin-left: -100px">
+                <span class="city_name">桃園市</span>
+            </div>
+            <div class="swiper-slide mr-3 change_tab" style="width: 216px; overflow: hidden;">
+                <img src="https://images.deliveryhero.io/image/fd-tw/city-tile/city-tile-Keelung.jpg" style="height: 272px; margin-left: -100px">
+                <span class="city_name">基隆市</span>
+            </div>
+            <div class="swiper-slide mr-3 change_tab" style="width: 216px; overflow: hidden;">
+                <img src="https://images.deliveryhero.io/image/fd-tw/city-tile/city-tile-Tainan.jpg?webp=0" style="height: 272px; margin-left: -100px">
+                <span class="city_name">台南市</span>
+            </div>
+            <div class="swiper-slide mr-3 change_tab" style="width: 216px; overflow: hidden;">
+                <img src="https://images.deliveryhero.io/image/fd-tw/city-tile/city-title-Miaoli.jpg?webp=0" style="height: 272px; margin-left: -100px">
+                <span class="city_name">苗栗市</span>
+            </div>
+            <div class="swiper-slide mr-3 change_tab" style="width: 216px; overflow: hidden;">
+                <img src="https://images.deliveryhero.io/image/fd-tw/city-tile/city-tile-chiayi.jpg?webp=0" style="height: 272px; margin-left: -100px">
+                <span class="city_name">嘉義市</span>
+            </div>
+        </div>
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
+
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+  <script>
+    var mySwiper = new Swiper('.swiper-container', {
+      autoplay: false,
+      freeMode: true,
+      slidesPerView: 1.8
+    })
+  </script>
 </html>
