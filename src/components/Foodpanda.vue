@@ -6,6 +6,25 @@
   </nav>
 </template>
 
+<script>
+import $ from 'jquery'
+export default {
+  name: 'foodPanda',
+  props: {
+    },
+  mounted () {
+    $('.change_tab').click(function () {
+      $('#mainPage').hide()
+      $('#foodPage').show()
+    })
+    $('.to_main_tab').click(function () {
+      $('#mainPage').show()
+      $('#foodPage').hide()
+    })
+  }
+}
+</script>
+
 <style type="text/css">
 .navbar {
   background-color: white;

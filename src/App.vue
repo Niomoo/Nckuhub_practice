@@ -1,22 +1,33 @@
 <template>
   <div id="app">
-    <router-view/>
+    <Foodpanda/>
+    <mainPage />
+    <foodPage />
   </div>
 </template>
 
 <script>
+import Foodpanda from './components/Foodpanda.vue'
+import mainPage from './components/mainPage.vue'
+import foodPage from './components/foodPage.vue'
 export default {
-  name: 'App'
+  name: 'app',
+  components: {
+    Foodpanda,
+    mainPage,
+    foodPage,
+  }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.button{
+    background-color: #D70F64 !important;
+    color: white !important;
+    font-weight: 600 !important;
+    border: none !important;
+    border-radius: 0% !important;
+    height: 64px;
+    line-height: 48px;
 }
 </style>
